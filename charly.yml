@@ -87,7 +87,7 @@ immich-layer-skill:
             # charly.yml
             immich:
               candy:
-                - '@github.com/opencharly/pod-immich:vTAG'
+                - '@github.com/opencharly/pod-immich'
             ```
             
             ## Used In Boxes
@@ -164,7 +164,7 @@ immich-ml-layer-skill:
             # charly.yml -- adds ML to an immich image
             immich-ml:
               candy:
-                - '@github.com/opencharly/pod-immich-ml:vTAG'
+                - '@github.com/opencharly/pod-immich-ml'
             ```
             
             ## Used In Boxes
