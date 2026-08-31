@@ -1,7 +1,7 @@
 version: 2026.240.1943
 charly-immich:
     candy:
-        version: 2026.243.0100
+        version: 2026.243.0909
         description: |-
             Metadata concept candy owning the charly-immich skills whose names have no namesake candy (immich photo-management images). Owns its family's `skill:` kind entities (sibling nodes in this file) — the
             the plugins→candies migration; candy/plugin-marketplace regenerates the marketplace
@@ -87,7 +87,7 @@ immich-layer-skill:
             # charly.yml
             immich:
               candy:
-                - '@github.com/opencharly/pod-immich:v2026.243.0410'
+                - '@github.com/opencharly/pod-immich:vTAG'
             ```
             
             ## Used In Boxes
@@ -164,7 +164,7 @@ immich-ml-layer-skill:
             # charly.yml -- adds ML to an immich image
             immich-ml:
               candy:
-                - '@github.com/opencharly/pod-immich-ml:v2026.243.0516'
+                - '@github.com/opencharly/pod-immich-ml:vTAG'
             ```
             
             ## Used In Boxes
