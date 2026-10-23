@@ -1,33 +1,19 @@
 charly-immich:
     candy:
         description: |-
-            Metadata concept candy owning the charly-immich skills whose names have no namesake candy (immich photo-management images). Owns its family's `skill:` kind entities (sibling nodes in this file) — the
-            the plugins→candies migration; candy/plugin-marketplace regenerates the marketplace
-            corpus (the standalone opencharly/marketplace repo) from them.
+            Drained concept candy — kept only so this repo still validates as a project while
+            it awaits retirement (opencharly/opencharly#600). It owns NO `skill:` entity any
+            more: under AGENTS.md Part II #5 the 2 `immich` family skills moved,
+            byte-identically, to the repositories that hold the code, plugin or config each one
+            documents — `pod-immich`, `pod-immich-ml`.
+            Nothing is authored here now.
         plan:
-            - run: this documentation-only candy ships no install content (it carries the family's skill/hook/marketplace entities); validate-satisfying no-op
+            - run: this documentation-only candy ships no install content (it carried the family's skill entities); validate-satisfying no-op
               command: "true"
               context:
                 - build
-            - check: the immich concept candy's skill entities are present and generated into the marketplace's immich/skills
-              id: charly-immich-present
+            - check: no-op — this drained candy declares no skill node; every immich-family skill lives in the repo that holds the entity it documents
+              id: charly-immich-drained
               context:
                 - build
               command: "true"
-
-immich-layer-skill:
-    skill:
-        name: immich-layer
-        family: immich
-        owner: charly-immich
-        description: |-
-            Immich photo management server on port 2283 with PostgreSQL and Redis.
-            Use when working with Immich, photo management, or media library services.
-immich-ml-layer-skill:
-    skill:
-        name: immich-ml-layer
-        family: immich
-        owner: charly-immich
-        description: |-
-            Immich machine learning backend on port 3003 for photo classification and search.
-            Use when working with Immich ML features, face detection, or CLIP search.

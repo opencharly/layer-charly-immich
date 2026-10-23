@@ -1,66 +1,36 @@
-# charly-immich
+# charly-immich — retired
 
-The `charly-immich` family — the Immich photo-management image skills.
+> **RETIRED — this repo publishes nothing.** All 2 `immich`-family skills live in the
+> repo that holds the code, plugin or config each one documents (the table below).
+> Nothing is authored, built, deployed or consumed here: a change to a `immich`-family
+> skill is a change at its destination repo, in the same pull request as the entity it
+> documents.
 
-The `charly-immich` candy is a **concept candy**: it ships no install content
-and owns the `immich` family of `skill:` entities whose names have no namesake
-candy. It currently carries two entities:
+**This repo no longer authors a skill.** It was the `charly-immich` concept candy: a `true`-no-op `plan:` and 2 `skill:` entities, with the prose in `.agents/skills/`.
+Under `AGENTS.md` Part II #5 a skill lives in the repo whose code,
+plugin or config it describes — and this repo holds none of them (measured before the
+change: **0 `.go`, 0 `.cue`, no `candy/` directory**) — so all of them moved, byte-identically,
+to the repos that do:
 
-- `immich-layer` — the Immich server candy (self-hosted photo management on
-  port 2283, with PostgreSQL, Redis, and FFmpeg).
-- `immich-ml-layer` — the Immich machine-learning backend candy (face
-  recognition and CLIP search on port 3003).
+| Skill | Now authored in | The entity that owns it |
+|---|---|---|
+| `immich-layer` | [`opencharly/pod-immich`](https://github.com/opencharly/pod-immich) | the `immich` candy it documents |
+| `immich-ml-layer` | [`opencharly/pod-immich-ml`](https://github.com/opencharly/pod-immich-ml) | the CUDA ML immich box |
 
-Two further `immich`-family skills are owned by sibling repos: `immich` in
-`opencharly/pod-immich` and `immich-ml` in `opencharly/pod-immich-ml`.
-`candy/plugin-marketplace` regenerates the standalone
-[opencharly/marketplace](https://github.com/opencharly/marketplace) corpus from
-these entities, so the skills are authored here and projected there.
+**The addresses did not change.** Every skill keeps its `immich` family at its
+destination node, so `/charly-immich:<skill>` still resolve — they are simply authored
+where the entity is implemented. The move is the rule `AGENTS.md` Part II #5 states, tracked
+in [opencharly/opencharly#600](https://github.com/opencharly/opencharly/issues/600).
 
-## What it provides
+## What remains here
 
 | Property | Value |
 |---|---|
-| Layer / candy | `charly-immich` (concept candy) |
+| Layer / candy | `charly-immich` (drained concept candy) |
 | Install content | none — a `true` no-op `plan:` |
-| Owns | 2 `skill:` entities: `immich-layer`, `immich-ml-layer` |
-| Projected to | `marketplace/immich/skills/` |
+| Owns | nothing — 0 `skill:` entities |
 | Service / port | none |
 
-## How to use it
-
-This repo is consumed as a **skill source**, not as an image layer. Edit the
-`skill:` entities in `charly.yml`; the marketplace regeneration projects them
-into `/charly-immich:*` pages. To reference the repo directly, compose it in a
-box. A box is a `candy:` node that carries the box's `base:` image and a nested
-`candy:` list of layer refs (the nested `candy:` is the composition list; the
-outer `candy:` is the box body):
-
-```yaml
-my-box:
-  candy:                  # the box body (an IMAGE is a `candy:` node carrying `base:`)
-    base: fedora          # the box's base image
-    candy:                # the box's composition list
-      - '@github.com/opencharly/layer-charly-immich:v2026.243.2103'
-```
-
-The Immich service itself is deployed through the `immich` box, which composes
-the `immich` candy from `opencharly/pod-immich`; the `immich-layer` skill here
-documents that candy's behaviour.
-
-## Layout
-
-- `charly.yml` — the `charly-immich:` concept candy entity plus two `skill:`
-  entities (`immich-layer`, `immich-ml-layer`).
-- `.github/workflows/tag-on-merge.yml` — CalVer tag + `CHANGELOG/` on merge.
-- `README.md` — this user overview.
-
-## Related
-
-- Owning skill: `/charly-immich:immich-layer`
-- ML backend: `/charly-immich:immich-ml-layer`
-- Authoring reference: `/charly-image:layer`
-- Immich box: `/charly-immich:immich` (in `opencharly/pod-immich`)
-- [`opencharly/marketplace`](https://github.com/opencharly/marketplace) — the projected corpus
-- [`opencharly/charly`](https://github.com/opencharly/charly) — the charly CLI and image builder
-- [`opencharly/opencharly`](https://github.com/opencharly/opencharly) — the umbrella
+Do not compose, reference or edit this repo: the skills, their routing nodes and their
+prose all live at the destinations above, and this repo's retirement is tracked in
+[opencharly/opencharly#600](https://github.com/opencharly/opencharly/issues/600).
